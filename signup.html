@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div class="body d-flex align-items-center">
+        <div class="form-container m-auto text-center">
+            <h1>Sign Up</h1>
+
+            <div class="mb-3">
+                <div class="position-relative">
+                    <input type="text" placeholder="Enter your Name" name="username" id="userName" autocomplete="name">
+                    <i class="left-icon fa-solid fa-user"></i>
+                </div>
+                <p id="nameMessage" class="m-1 p-1 text-danger d-none text-start">
+                    Enter a valid username
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <div class="position-relative">
+                    <input type="text" placeholder="Enter your Email" name="email" id="userEmail" autocomplete="email">
+                    <i class="left-icon fa-solid fa-envelope"></i>
+                </div>
+                <p id="emailMessage" class="m-1 p-1 text-danger d-none text-start">
+                    Enter a valid email
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <div class="position-relative">
+                    <input type="password" placeholder="Enter your Password" name="password" id="password"
+                        autocomplete="current-password">
+                    <i class="left-icon fa-solid fa-lock"></i>
+                    <i id="eyeIcon" class="right-icon fa-solid fa-eye"></i>
+                </div>
+                <p id="passMessage" class="m-1 p-1 text-danger d-none text-start">
+                    Password must be 8+ characters with a letter, digit, and special character.
+                </p>
+            </div>
+            <button id="signUpBtn" class="glow-on-hover mt-2 mb-3" type="button">Sign Up</button>
+            <p>You have an account? <a href="index.html"> <span class="fw-bold">Sign In</span> </a></p>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- External library for showing alert messages -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom JavaScript for signup functionality -->
+    <script src="js/main.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

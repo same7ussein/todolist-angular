@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+.body {
+  background-image: url(../src/assets/img.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-container {
+  width: 420px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px 30px;
+  color: #fff;
+}
+
+.form-container h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.form-container input:not(input[type="checkbox"]) {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 20px 20px 45px;
+}
+
+/* Styling for autofill input fields */
+.form-container input:-webkit-autofill,
+.form-container input:-webkit-autofill:hover,
+.form-container input:-webkit-autofill:focus,
+.form-container input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: transparent !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  color-adjust: exact !important;
+}
+
+.form-container input[type="password"] {
+  padding-right: 45px !important;
+}
+
+.form-container input::placeholder {
+  color: #fff;
+}
+
+.form-container .left-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+}
+
+.form-container .right-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.form-details {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.form-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.form-container label {
+  cursor: pointer;
+}
+
+/* to hidden visiblility password in edge  */
+input::-ms-reveal {
+  display: none;
+}
+
+#logout {
+  cursor: pointer;
+}
+
+/* Login and Sign Up buttons animation */
+
+.glow-on-hover {
+  border: none;
+  outline: none;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 40px;
+}
+
+.glow-on-hover:active {
+  color: #fff;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+/* media for login and sign up */
+@media screen and (max-width: 450px) { 
+  .body {
+    padding: 0px 10px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form-container {
+    padding: 10px 15px;
+  }
+
+  .form-container input:not(input[type="checkbox"]) {
+    font-size: 14px;
+    padding: 20px 20px 20px 40px;
+  }
+
+  .form-container input[type="password"] {
+    padding-right: 35px !important;
+  }
+
+  .form-container .left-icon,
+  .form-container .right-icon {
+    font-size: 16px;
+  }
+
+  .form-details {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .form-details a {
+    align-self: flex-end;
+  }
+
+  .form-details a,
+  .form-details div label,
+  .form-container p {
+    font-size: 14px;
+  }
+
+  .close-btn {
+    width: 150px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

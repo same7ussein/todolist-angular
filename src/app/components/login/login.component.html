@@ -1,0 +1,17 @@
+<main class="body d-flex align-items-center">
+    <div class="form-container m-auto text-center">
+        <h1>Login</h1>
+        <div class="position-relative mb-3">
+            <input type="text" placeholder="Enter your Email" name="email" [(ngModel)]="email" autocomplete="off">
+            <i class="left-icon fa-solid fa-envelope"></i>
+        </div>
+        <div class="position-relative mb-3">
+            <input type="password" placeholder="Enter your Password" name="password" [(ngModel)]="password"
+                autocomplete="off" #passwordInput>
+            <i class="left-icon fa-solid fa-lock"></i>
+            <i #eyeIcon class="right-icon fa-solid fa-eye" (click)="togglePasswordVisibility()"></i>
+        </div>
+        <button class="glow-on-hover mt-2 mb-3" type="button" (click)="signIn()">Login</button>
+        <p>Don't have an account? <a routerLink="/signup"> <span class="fw-bold ">SignUp</span> </a></p>
+    </div>
+</main>

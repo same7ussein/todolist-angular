@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <main class="body d-flex align-items-center">
+    <div class="form-container m-auto text-center">
+      <h1>Login</h1>
+      <div class="position-relative mb-3">
+        <input type="text" placeholder="Enter your Email" name="email" id="userEmail" autocomplete="email">
+        <i class="left-icon fa-solid fa-envelope"></i>
+      </div>
+      <div class="position-relative mb-3">
+        <input type="password" placeholder="Enter your Password" name="password" id="password"
+          autocomplete="current-password">
+        <i class="left-icon fa-solid fa-lock"></i>
+        <i id="eyeIcon" class="right-icon fa-solid fa-eye"></i>
+      </div>
+      <button id="signInBtn" class="glow-on-hover mt-2 mb-3" type="button">Login</button>
+      <p>Don't have an account? <a href="signup.html"> <span class="fw-bold ">SignUp</span> </a></p>
+    </div>
+  </main>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- External library for showing alert messages -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Custom JavaScript for login functionality -->
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

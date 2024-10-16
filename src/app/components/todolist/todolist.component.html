@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-dark p-3">
+    <div class="container">
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars text-white fs-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0 my-4">
+                <li class="nav-item">
+                    <div id="logout" class="close-btn"><a (click)="userLogout()">LOGOUT</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="todo-body">
+    <div class="box">
+        <h2>To Do List</h2>
+
+        <input type="text" class="inputBx" #inputBx (keyup)="onKeyUp($event)">
+        
+        <ul id="list" #list>
+            <li *ngFor="let task of tasks" [ngClass]="{'done': task.completed}" (click)="toggleTaskCompletion(task)">
+                <i class="list-icon fa-solid fa-check"></i>
+                {{ task.text }}
+                <i id="closeIconBtn" class="fa-solid fa-xmark" (click)="deleteTask(task, $event)"></i>
+            </li>
+        </ul>
+
+    </div>
+</div>

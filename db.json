@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "9234",
+      "name": "sameh",
+      "email": "sameh@gmail.com",
+      "pass": "Sameh@4982931"
+    },
+    {
+      "id": "c436",
+      "name": "ahmed",
+      "email": "ahmed@gmail.com",
+      "pass": "Sameh@4982931"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "67e0",
+      "text": "html",
+      "completed": true,
+      "userName": "sameh"
+    },
+    {
+      "id": "85b1",
+      "text": "js",
+      "completed": false,
+      "userName": "sameh"
+    },
+    {
+      "id": "681e",
+      "text": "angular",
+      "completed": true,
+      "userName": "ahmed"
+    },
+    {
+      "id": "63fb",
+      "text": "boostrap",
+      "completed": false,
+      "userName": "sameh"
+    }
+  ]
+}
