@@ -68,6 +68,14 @@ export class LoginComponent implements AfterViewInit, OnInit {
   }
 
   signIn(): void {
+    if (!this.email || !this.password) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Email and Password are required',
+        timer: 1500,
+      });
+      return;
+    }
     this._auth
       .getUserByEmailAndPassword(this.email, this.password)
       .subscribe((users) => {
